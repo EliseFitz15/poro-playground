@@ -6,6 +6,7 @@ $pink: #F67280;
 
 .playground-header {
   background-color: $peach;
+  margin-bottom: -10px;
 }
 
 .playground-header h1 {
@@ -25,6 +26,10 @@ $pink: #F67280;
   width: 25%
 }
 
+.featured {
+  box-shadow: 10px 10px 5px #888888;
+}
+
 .poro-panel img {
   width: 55%;
   padding: 20px;
@@ -37,10 +42,21 @@ $pink: #F67280;
 }
 
 .link-panel a {
-  border: 2px solid $plum;
-  background-color: $plum;
+  border: 2px solid $reddish;
+  background-color: $reddish;
   padding: 15px 20px;
   color: white;
   display: block;
   text-align: center;
+}
+
+#poro-land {
+  background-color: $plum;
+}
+
+#poro-land img {
+  margin: 0 auto;
+  width: 50%;
+  display: block;
+  padding: 50px;
 }

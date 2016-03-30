@@ -2,10 +2,14 @@
   <h1>PORO Playground</h1>
 </div>
 
+<div id="poro-land">
+  <%= image_tag("poro-land.jpg") %>
+</div>
+
 <div class="poro-list">
   <div class="row" data-equalizer data-equalize-on="medium">
   <% @poros.each do |poro| %>
-    <div class="poro-panel small-4 columns" data-equalizer-watch>
+    <div class="poro-panel small-4 columns featured" data-equalizer-watch>
       <%= image_tag(poro.poro_photo) %>
       <h2>
         <%= poro.name %>

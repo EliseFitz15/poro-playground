@@ -1,3 +1,9 @@
 @import "foundation_and_overrides";
 @import "poro_index";
 @import "poro_new";
+
+$peach: #F8B195;
+
+body {
+  background-color: $peach;
+}
