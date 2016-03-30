@@ -1,0 +1,28 @@
+<div class="playground-header">
+  <h1>PORO Playground</h1>
+</div>
+
+<div class="poro-list">
+  <div class="row" data-equalizer data-equalize-on="medium">
+  <% @poros.each do |poro| %>
+    <div class="poro-panel small-4 columns" data-equalizer-watch>
+      <%= image_tag(poro.poro_photo) %>
+      <h2>
+        <%= poro.name %>
+      </h2>
+      <ul>
+        <li>
+          <%= poro.owner %>
+        </li>
+        <li>
+          <%= poro.description %>
+        </li>
+      </ul>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="link-panel">
+  <%= link_to "Add New POROs", new_poro_path %>
+</div>

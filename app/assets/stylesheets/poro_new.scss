@@ -1,0 +1,34 @@
+$reddish: #C06C84;
+$peach: #F8B195;
+$blue: #355C7D;
+$plum: #6C5B7B;
+$pink: #F67280;
+
+.register-header {
+  background-color: $peach;
+}
+
+.register-header h1 {
+  color: $plum;
+  text-align: center;
+  padding: 15px;
+}
+
+.poro-form {
+  padding: 50px 25px;
+  background-color: $blue;
+  margin-top: -15px;
+}
+
+.new_poro .button {
+  background-color: $reddish;
+}
+
+img {
+  width: 250px;
+}
+
+.poro-form h3 {
+  text-align: center;
+  color: $peach;
+}

@@ -1,0 +1,33 @@
+<div class="register-header">
+  <h1>Register Your PORO here </h1>
+</div>
+
+<div class="poro-form">
+  <h3>
+    Add PORO
+  </h3>
+  
+  <div class="row large-8">
+  <%= form_for @poro do |f| %>
+
+    <%= f.label :name, "PORO Name" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :owner, "PORO Owner"%>
+    <%= f.text_field :owner %>
+
+    <%= f.label :description, "Description" %>
+    <%= f.text_field :description %>
+
+    <%= f.label :poro_photo, "Add PORO Photo" %>
+    <%= f.file_field :poro_photo  %>
+
+    <%= f.submit "Add PORO", class: 'button' %>
+
+  <% end %>
+  </div>
+</div>
+
+<div class="link-panel">
+  <%= link_to "See all POROs", poros_path %>
+</div>

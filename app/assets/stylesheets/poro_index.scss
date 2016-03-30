@@ -1,0 +1,46 @@
+$reddish: #C06C84;
+$peach: #F8B195;
+$blue: #355C7D;
+$plum: #6C5B7B;
+$pink: #F67280;
+
+.playground-header {
+  background-color: $peach;
+}
+
+.playground-header h1 {
+  color: $plum;
+  text-align: center;
+  padding: 15px;
+}
+
+.poro-list {
+  background-color: $blue;
+  margin-top: -20px;
+}
+
+.poro-panel {
+  background-color: $pink;
+  margin: 20px;
+  width: 25%
+}
+
+.poro-panel img {
+  width: 55%;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
+.columns:last-child:not(:first-child) {
+  float: left;
+}
+
+.link-panel a {
+  border: 2px solid $plum;
+  background-color: $plum;
+  padding: 15px 20px;
+  color: white;
+  display: block;
+  text-align: center;
+}
