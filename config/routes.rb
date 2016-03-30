@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'homes#welcome'
+  root 'poros#index'
   get "/poro_land", to: "homes#poro_land"
 
   resources :poros, only: [:index, :new, :create]

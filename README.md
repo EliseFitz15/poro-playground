@@ -89,6 +89,16 @@ $("#contact-box").append(dogeTaco);
 
 [`append()` documentation](http://api.jquery.com/append/)
 
+### Remove an element and then append it somewhere else
+
+```
+var dogeTaco = $("#doge-taco").remove();
+$("#contact-box").append(dogeTaco);
+```
+
+[`remove()` documentation](http://api.jquery.com/remove/)
+
+[`append()` documentation](http://api.jquery.com/append/)
 
 ## How to use within Rails
 Good practice to add files for different features but that's where you can run into some issues. For the app size you guys are using it's good to keep in one file for now.
@@ -127,16 +137,3 @@ $('.poro-form h3').on("click", function() {
 
 #### Effect for hovering on a poro panel
   - add class with shadow box "featured"
-
-#### Append something somewhere
-
-### Remove an element and then append it somewhere else
-
-```
-var dogeTaco = $("#doge-taco").remove();
-$("#contact-box").append(dogeTaco);
-```
-
-[`remove()` documentation](http://api.jquery.com/remove/)
-
-[`append()` documentation](http://api.jquery.com/append/)
