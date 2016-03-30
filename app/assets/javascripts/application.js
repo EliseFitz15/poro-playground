@@ -17,9 +17,3 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
-
-$(document).ready(function(){
-  $('.poro-form h3').on( "click", function() {
-    $('#new_poro').toggle();
-  });
-});

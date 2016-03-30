@@ -16,7 +16,7 @@ Everything you can do in jQuery is written with regular ([sometimes jokingly cal
 
 Rails comes with jQuery included as well as jQueryUI.
 
-### In Sinatra
+## In Sinatra
 
 If you are adding it in a Sinarta app, you can check out this [repository](https://github.com/mlg-/space-tacos) for directions.
 
@@ -24,15 +24,18 @@ There are two key ways:
   - download from the [documentation.](http://api.jquery.com/)
   - include link from [Google Hosted Libraries](https://developers.google.com/speed/libraries/)
 
-## Note on Syntax
-The `$` is the same as including `jQuery` before the selector. For example, `$('h2')` is the same as `jQuery('h2')` the `$` here denotes the library. jQuery being among the most popular libraries it's safe to include the dollar sign in all referees. But be aware that other libraries may also use the `$` which could through you errors down the road or a namespace collision, at which point you should refer to the jQuery [documentation on this topic](http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/).
-
 ## Manipulating the DOM
 
-### First grab the jQuery object
+This is the app we will be manipulating: https://poro-playground.herokuapp.com
+
+### Note on Syntax
+The `$` is the same as including `jQuery` before the selector. For example, `$('h2')` is the same as `jQuery('h2')` the `$` here denotes the library. jQuery being among the most popular libraries it's safe to include the dollar sign in all referees. But be aware that other libraries may also use the `$` which could through you errors down the road or a namespace collision, at which point you should refer to the jQuery [documentation on this topic](http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/).
+
+
+## First grab the jQuery object
 There are a number of ways to "grab" selectors from the DOM:    
   - By id `$("#poro-land");`
-  - By class `$(".poro-land");`
+  - By class `$(".poro-panel");`
   - By element `$("h1");`
   - Combo `$("#poro-panel img");`
 
@@ -40,11 +43,14 @@ There are a number of ways to "grab" selectors from the DOM:
 You can assign any element you select with jQuery to a variable and then call jQuery methods on it.
 
 ```js
-var poroPanel = $('.poro-panel')
+var poroLand = $('#poro-land')
 poroPanel.hide();
 ```
+#### Pro-tip: Don't mix with Vanilla JS
 
-### Then have fun with that object
+When "grabbing" elements from the DOM with jQuery we are returned jQuery objects. We can call jQuery effects and events on jQuery objects but not if we "grab" them with JS.
+
+## Then have fun with that object
 To get some inspiration and decide what to do once you grab the item or items you want from the page, check out the [jQuery API documentation](http://api.jquery.com/).
 
 ### Hiding an element
@@ -81,24 +87,15 @@ $(".poro-panel").addClass("feature");
 ### Remove an element and then append it somewhere else
 
 ```
-var dogeTaco = $("#doge-taco").remove();
-$("#contact-box").append(dogeTaco);
+var poroPic = $('#poro-land').remove();
+$('.poro-list').append(poroPic);
 ```
 
 [`remove()` documentation](http://api.jquery.com/remove/)
 
 [`append()` documentation](http://api.jquery.com/append/)
 
-### Remove an element and then append it somewhere else
-
-```
-var dogeTaco = $("#doge-taco").remove();
-$("#contact-box").append(dogeTaco);
-```
-
-[`remove()` documentation](http://api.jquery.com/remove/)
-
-[`append()` documentation](http://api.jquery.com/append/)
+*Challenge:* how would we add it back?
 
 ## How to use within Rails
 Good practice to add files for different features but that's where you can run into some issues. For the app size you guys are using it's good to keep in one file for now.
@@ -129,11 +126,8 @@ Let's add these features:
 
 ####Toggle the form
 
-```javascript
-$('.poro-form h3').on("click", function() {
+```js
+$('.poro-form h3').click(function() {
   $('#new_poro').toggle();
 });
 ```
-
-#### Effect for hovering on a poro panel
-  - add class with shadow box "featured"
