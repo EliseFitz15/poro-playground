@@ -16,4 +16,12 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation();
+
+});
+
+$(document).ready(function(){
+  $('.poro-form h3').click(function() {
+    $('#new_poro').toggle();
+  });
+});
